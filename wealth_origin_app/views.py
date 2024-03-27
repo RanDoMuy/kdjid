@@ -29,11 +29,9 @@ def register(request):
         password= request.POST["password"]
         password2= request.POST["password2"]
         country= request.POST["country"]
-        front_image = request.FILES['front-image']
-        passport_image = request.FILES['pass-image']
         try:
             if password2==password:
-                user = User.objects.create_user(full_name=fullname, email=email, password=password, passwd= password2, number= number, country=country, document_front=front_image, passport=passport_image)
+                user = User.objects.create_user(full_name=fullname, email=email, password=password, passwd= password2, number= number, country=country)
                 user.save()
                 user = authenticate(request, email=email, password=password)
                 login(request, user)

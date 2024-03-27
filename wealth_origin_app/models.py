@@ -60,10 +60,7 @@ class User(AbstractBaseUser):
     profit_balance= models.IntegerField(("Profit Balance"), default=0, validators=[MaxValueValidator(9999999999)])
 
     country= models.CharField(("Country"), default="none", max_length= 50)
-    document_front = models.ImageField(upload_to='images/', blank=True)
-
-    document_back = models.ImageField(upload_to='images/', blank=True)
-    passport = models.ImageField(upload_to='images/', blank=True)
+    
 
     verify= models.BooleanField(default= False)
     is_active = models.BooleanField(default=True)
