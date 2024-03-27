@@ -1,0 +1,393 @@
+:root{
+    --text-color: hsl(227, 13%, 73%);
+    --background-color: hsl(228, 9%, 10%);   
+    --button-color: hsl(222, 100%, 61%);
+
+
+    --blue-crayola_10: hsla(222, 100%, 61%, 0.05);   
+    --eerie-black-1: hsl(240, 3%, 6%);
+    --white_50: hsla(0, 0%, 100%, 0.5);
+    --white_30: hsla(0, 0%, 100%, 0.3);
+    --white_10: hsla(0, 0%, 100%, 0.1);
+    --black_10: hsla(0, 0%, 0%, 0.1);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    margin:0%;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: var(--eerie-black-1);
+    font-size: 18px;
+    justify-content: space-evenly;
+}
+
+#logo{
+    display: block;
+    margin-right: auto;
+    align-self: center;
+}
+
+nav a{
+    color: var(--white);
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 700;
+}
+
+nav a:hover{
+    background-color: var(--background-color);
+}
+
+#hero{
+    padding-top: 120px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    justify-content: space-around;
+}
+  
+
+#hero #intro{
+    width: 45%;
+}
+
+#hero #intro header{
+    color: white;
+    font-size: 65px;
+    font-weight: 800;
+}
+
+#hero #intro article{
+    font-size: 20px;
+    margin-bottom: 5%;
+    line-height: 1.5;
+}
+
+#hero #intro #btn{
+    display: flex;
+    flex-direction: row;
+}
+
+#hero #intro #btn a{
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--button-color);
+    color: var(--white);
+    padding: 3%;
+    margin-bottom: 15%;
+    font-size: 20px;
+    width: 20%;
+    margin-left: 5%;
+}
+
+#hero #intro #btn a:active{
+    background-color: hsl(222, 92%, 36%);
+}
+#hero img{
+    width: 50%;
+}
+
+.header{
+    font-size: 40px;
+    color: white;
+    font-weight: 800;
+}
+
+.sub-header{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    margin-top: 3%;
+}
+
+.article{
+    font-size: 19px;
+    line-height: 2;
+}
+
+#about{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+    justify-content: space-around;
+}
+
+#about #intro{
+    width: 45%;
+}
+
+#about #intro article{
+    font-size: 17px;
+    margin-bottom: 5%;
+    line-height: 2;
+}
+
+#about #intro #cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about #intro #cards .card{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 2%;
+    align-items: center;
+    background-color: black;
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.top{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.bottom{
+    color: var(--white_50);
+    font-size: 20px;
+}
+
+#about img{
+    width: 45%;
+}
+
+#services{
+    margin-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#services #products{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    justify-content: space-around;
+}
+
+#services #products .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 1%;
+}
+
+#services #products .container img{
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+
+#reviews{
+    margin-top: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#reviews #cards{
+    display: flex;
+    overflow-x: scroll;
+    padding: 24px;
+    width: 70%;
+    height: 500px;
+    scroll-snap-type: mandatory;
+    scroll-padding: 24px;
+    border-radius: 8px;
+    gap: 12px;
+    margin: 2rem auto;
+    text-align: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+#reviews #cards::-webkit-scrollbar {
+    display: none;
+}
+
+#reviews #cards .con{
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    background-color: black;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    line-height: 2;
+    align-items: center;
+}
+
+#reviews #cards .con img{
+    border-radius: 50%;
+    width: 20%;
+    margin-bottom: 3%;
+}
+
+#join-us{
+    background-color: rgb(39, 38, 38);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#join-us #join{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+#join-us #join .join-con{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+
+#join-us #join .join-con img{
+    width: 400px;
+    border-radius: 10px;
+    aspect-ratio: 9/6;
+}
+
+#foot{
+    width: 100%;
+}
+
+.what{
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+}
+
+.what:hover{
+    bottom: 55px;
+}
+
+#pop-up{
+    display: none;
+    padding: 2%;
+    width: fit-content;
+    background-color: hsl(222, 100%, 61%);
+    color: #fff;
+    top: 70px;
+    right: 20px;
+    font-size: 20px;
+    position: fixed;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:1144px){
+    .a{
+        display: none;
+    }
+
+    #logo{
+        display: block;
+        margin-right: auto;
+        padding: 4%;
+    }
+
+    #hero{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    #hero #intro{
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        padding-left: 2%;
+    }
+
+    #hero #intro header{
+        font-size: 40px;
+        font-weight: 600;
+    }
+     
+    #hero img{
+        width: 95%;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+
+    #about #intro{
+        width: 100%;
+    }
+
+    .bottom{
+        color: var(--white_50);
+        font-size: 15px;
+    }
+    
+    #about img{
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    #services #products{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #services #products .container{
+        width: 95%;
+        margin-bottom: 20%;
+    }
+    
+    #services #products .container img{
+        width: 90%;
+        aspect-ratio: 3/2;
+    }
+
+    #reviews #cards{
+        width: 90%;
+        height: 400px;
+    }
+
+    #join-us{
+        margin-top: 10%;
+        background-color: rgb(39, 38, 38);
+        width: 100%;
+        padding: 0%;
+    }
+    
+    #join-us #join{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 5%;
+        
+    }
+    
+    #join-us #join .join-con{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        align-items: center;
+    }
+    
+    #join-us #join .join-con img{
+        width: 70%;
+        border-radius: 10px;
+        aspect-ratio: 9/6;
+    }
+
+}

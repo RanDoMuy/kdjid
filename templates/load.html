@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Origin</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/load.css' %}">
+</head>
+<body>
+    <div id="intro">
+        <img id="alpha_logo" src="{% static 'images/logo.svg' %}">
+        <h1>WEALTH ORIGIN</h1>
+        <h2 id="intro_text">Trade with confidence, trade with us</h2>
+    </div>
+
+    <center><div id="preloader">
+        <!-- Add your loading animation or image here -->
+    </div></center>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'home/';
+        }, 2500);
+    </script>
+</body>
+</html>

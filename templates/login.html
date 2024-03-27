@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/login_signup.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<title>Wealth Origin - Login</title>
+</head>
+<body>
+	<div id="title">
+        <img src="{% static 'images/logo.svg' %}">
+		<h1>Wealth Origin</h1>
+		<text>Trade CFDs all on our advanced, web-based trading platform designed with you, the user in mind.</text>
+	</div>
+	
+	<div id="container">
+		<h2>Login</h2>
+		<form method="POST">{% csrf_token %}
+            <label>Email Address</label>
+			<input class="input" type="email" placeholder="Email Address" name="email" required/>
+            <label>Password</label>
+			<input class="input" type="password" placeholder="Password" name="password" required/>
+			<input id="submit" type="submit" value="Login"/>
+		</form>
+		<a href="#" id="fp">Forgot password?</a>
+		<hr>
+		<a href="{% url 'register' %}" id="signup">Register</a>
+		<h3 style="color: white;">{{error_message}}</h3>
+	</div>
+	
+</body>
+</html>

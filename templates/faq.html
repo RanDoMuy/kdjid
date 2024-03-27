@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'fontawesome-free-6.4.0-web/css/all.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/faq.css' %}">
+	<script src="{% static 'scripts/script.js' %}"></script>
+    <script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+
+    <title>Wealth Origin - FAQ</title>
+</head>
+<body>
+    <nav id="navbar">
+        <button onclick="openNav()" id="navctrl">&#9776;&nbsp;&nbsp;&nbsp;FAQ</button>
+		<button id="btnnav">FAQ</button>
+	</nav>
+
+	<div id="SideNav" class="sidenav">
+		<center><img src="{% static 'images/pic.png' %}"/></center>
+		<center><label>{{ user.full_name }}</label></center>
+		<hr>
+		<a href="{% url 'dashboard' %}"><i class="fa-solid fa-house" style="font-size: 20px;"></i>&nbsp&nbsp Dashboard</a>
+		<a href="{% url 'deposit' %}"><i class="fa-solid fa-building-columns" style="font-size: 20px;"></i>&nbsp&nbsp Deposit</a>
+		<a href="{% url 'invest' %}"><i class="fa-solid fa-chart-line" style="font-size: 20px;"></i>&nbsp&nbsp Investment Plan</a>
+		<a href="{% url 'withdraw' %}"><i class="fa-solid fa-square-arrow-up-right" style="font-size: 20px;"></i >&nbsp&nbsp Withdrawal</a>
+		<a href="{% url 'faq' %}"><i class="fa-solid fa-circle-question" style="font-size: 20px;"></i>&nbsp&nbsp FAQ</a>
+		<a href="{% url 'profile' %}"><i class="fa-solid fa-user" style="font-size: 20px;"></i>&nbsp&nbsp Profile</a>
+		<a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px;"></i>&nbsp&nbsp Logout</a>
+	</div>
+
+
+    <div id="main">
+
+        <div class="box" id="intro">
+            <header class="header">Withdrawal</header>
+            <hr style="width: 100%;">
+            <header style="color: hsl(222, 100%, 61%);">withdraw Funds - How Does It Work?</header>
+            <p>At Wealth Origin , we have designed our withdraw process to be as easy as our funding process. To begin the withdraw process first select your preferred withdraw method and then type in the amount you want to withdraw and click "Proceed".</p>
+                
+            <header style="color: hsl(222, 100%, 61%);">What Methods Are There For withdrawing Funds?</header>
+            <p> Wealth Origin provides numerous withdraw methods</p>
+                
+            <header style="color: hsl(222, 100%, 61%);">Must withdraw Requests Only Be Made At Certain Times?</header>
+            <p>withdraws can be made at any time via the Wealth Origin website. The requests will be processed immediately, and during the relevant financial institution's business hours.</p>
+        </div>
+
+        <div class="box">
+            <header class="header">Deposit</header>
+            <hr style="width: 100%;">
+            <header style="color: hsl(222, 100%, 61%);">Deposit Funds - How Does It Work?</header>
+            <p>At Wealth Origin , we have designed our deposit process to be as easy as our funding process. To begin the deposit process first select your preferred deposit method and then type in the amount you want to withdraw and click "Proceed".</p>
+                
+            <header style="color: hsl(222, 100%, 61%);">What Methods Are There For depositing Funds?</header>
+            <p>Wealth Origin provides numerous deposit methods</p>
+                
+            <header style="color: hsl(222, 100%, 61%);">Must Deposit Requests Only Be Made At Certain Times?</header>
+            <p>Deposits can be made at any time via the Wealth Origin website. The requests will be processed immediately, and during the relevant financial institution's business hours.</p>
+        </div>
+
+
+        <div class="box">
+            <header class="header">What is the process of investing?</header>
+            <hr style="width: 100%;">
+            
+            <p>To make investments you should register with ForexBuzzMarket, create an account and then you can make your deposit. All the investments are made in your personal account after login.</p>
+
+        </div>
+
+        <div class="box">
+            <header class="header">May i create more than one account?</header>
+            <hr style="width: 100%;">
+            
+            <p>No. you are allowed to create only one account. For special situations please contact our Customer Support.</p>
+
+        </div>
+
+        <div class="box">
+            <header class="header">What is this website about? Is this an ICO?</header>
+            <hr style="width: 100%;">
+            
+            <p>No. This is not an Initial Coin Offering. We believe that ICO's should be approached with caution as the majority of "Alt coins" do not offer any benefits to more established crypto currencies such as Bitcoin, Ethereum, etc. ForexBuzzMarket is a managed cryptocurrency trading platform with user friendly interface and attractive offer.</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

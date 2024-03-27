@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'fontawesome-free-6.4.0-web/css/all.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/deposit_withdraw.css' %}">
+	<script src="{% static 'scripts/script.js' %}"></script>
+	<script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+    <title>Wealth Origin - Withdrawal</title>
+</head>
+<body>
+    <nav id="navbar">
+        <button onclick="openNav()" id="navctrl">&#9776;&nbsp;&nbsp;&nbsp;Withdrawal</button>
+		<button id="btnnav">Withdrawal</button>
+	</nav>
+
+	<div id="SideNav" class="sidenav">
+		<center><img src="{% static 'images/pic.png' %}"/></center>
+		<center><label>{{ user.full_name }}</label></center>
+		<hr>
+		<a href="{% url 'dashboard' %}"><i class="fa-solid fa-house" style="font-size: 20px;"></i>&nbsp&nbsp Dashboard</a>
+		<a href="{% url 'deposit' %}"><i class="fa-solid fa-building-columns" style="font-size: 20px;"></i>&nbsp&nbsp Deposit</a>
+		<a href="{% url 'invest' %}"><i class="fa-solid fa-chart-line" style="font-size: 20px;"></i>&nbsp&nbsp Investment Plan</a>
+		<a href="{% url 'withdraw' %}"><i class="fa-solid fa-square-arrow-up-right" style="font-size: 20px;"></i >&nbsp&nbsp Withdrawal</a>
+		<a href="{% url 'faq' %}"><i class="fa-solid fa-circle-question" style="font-size: 20px;"></i>&nbsp&nbsp FAQ</a>
+		<a href="{% url 'profile' %}"><i class="fa-solid fa-user" style="font-size: 20px;"></i>&nbsp&nbsp Profile</a>
+		<a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px;"></i>&nbsp&nbsp Logout</a>
+	</div>
+
+    <div id="main">
+		<form id="deposit" class="box" method="POST">{% csrf_token %}
+			<header class="header">Withdrawal Request</header>
+			<hr style="width: 100%;">
+
+			Select Withdraw Method
+			<select>
+				<option class="option">Bitcoin</option>
+			</select>
+
+			Enter Withdraw Amount($)
+			<input id="amountField" type="number" placeholder="$Amount" name="amount" required>
+
+            Enter Your Bitcoin Wallet Address !!!
+			<input style="background-color: white; color: black;" id="walletField" type="text" placeholder="Bitcoin wallet Address" required>
+			<input style="text-align: center; text-decoration: none; border-radius: 50px; background-color: var(--eerie-black-1); color: white; padding: 4%; width: 50%; border-style: none;" id="a" type="submit" value="Withdraw" onclick="openmodal()">
+		</form>
+
+
+        <div class="box">
+			<header class="header">Withdrawal History</header>
+			<hr style="width: 100%;">
+			<table>
+				<tr>
+					<th>Amount</th>
+					<th>Method</th>
+					<th>Status</th>
+					<th>Date</th>
+				</tr>
+				{% for withdraw in withdraws %}
+				<tr>
+					<td>{{ withdraw.amount }}</td>
+					<td>{{ withdraw.method }}</td>
+					<td>{{ withdraw.status }}</td>
+					<td>{{ withdraw.timestamp }}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+
+	</div>
+    
+</body>
+</html>

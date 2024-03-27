@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'fontawesome-free-6.4.0-web/css/all.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/invest.css' %}">
+	<script src="{% static 'scripts/script.js' %}"></script>
+	<script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+
+    <title>Wealth Origin - Investment Plan</title>
+</head>
+<body>
+	<nav id="navbar">
+        <button onclick="openNav()" id="navctrl">&#9776;&nbsp;&nbsp;&nbsp;Investment Plan</button>
+		<button id="btnnav">Investment Plan</button>
+	</nav>
+
+	<div id="SideNav" class="sidenav">
+		<center><img src="{% static 'images/pic.png' %}"/></center>
+		<center><label>{{ user.full_name }}</label></center>
+		<hr>
+		<a href="{% url 'dashboard' %}"><i class="fa-solid fa-house" style="font-size: 20px;"></i>&nbsp&nbsp Dashboard</a>
+		<a href="{% url 'deposit' %}"><i class="fa-solid fa-building-columns" style="font-size: 20px;"></i>&nbsp&nbsp Deposit</a>
+		<a href="{% url 'invest' %}"><i class="fa-solid fa-chart-line" style="font-size: 20px;"></i>&nbsp&nbsp Investment Plan</a>
+		<a href="{% url 'withdraw' %}"><i class="fa-solid fa-square-arrow-up-right" style="font-size: 20px;"></i >&nbsp&nbsp Withdrawal</a>
+		<a href="{% url 'faq' %}"><i class="fa-solid fa-circle-question" style="font-size: 20px;"></i>&nbsp&nbsp FAQ</a>
+		<a href="{% url 'profile' %}"><i class="fa-solid fa-user" style="font-size: 20px;"></i>&nbsp&nbsp Profile</a>
+		<a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px;"></i>&nbsp&nbsp Logout</a>
+	</div>
+
+
+    <div id="main">
+		<div class="plan">
+			<header class="header">STARTER PLAN</header>
+			<text class="price">$200</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				10%</text></center>
+			<a class="select" href="{% url 'starter plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+
+		<div class="plan">
+			<header class="header">BRONZE PLAN</header>
+			<text class="price">$500</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				15%</text></center>
+			<a class="select" href="{% url 'bronze plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+
+		<div class="plan">
+			<header class="header">SILVER PLAN</header>
+			<text class="price">$1000</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				20%</text></center>
+			<a class="select" href="{% url 'silver plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+
+		<div class="plan">
+			<header class="header">GOLD PLAN</header>
+			<text class="price">$2000</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				25%</text></center>
+			<a class="select" href="{% url 'gold plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+
+		<div class="plan">
+			<header class="header">DIAMOND PLAN</header>
+			<text class="price">$5000</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				30%</text></center>
+			<a class="select" href="{% url 'diamond plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+
+		<div class="plan">
+			<header class="header">PLATINUM PLAN</header>
+			<text class="price">$10000</text>
+			<center><text class="text">24x7 Support<br>
+
+				Professional Charts<br>
+				
+				Trading Alerts<br>
+				
+				Return On Investment:
+				45%</text></center>
+			<a class="select" href="{% url 'platinum plan' %}">CHOOSE THIS</a>
+			<br><header class="header" style="color: rgb(4, 163, 4);"></header>
+			<br><header class="header" style="color: red;"></header>
+		</div>
+	</div>
+
+
+</body>
+</html>

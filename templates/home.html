@@ -1,0 +1,305 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+    <script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+    <title>Wealth Origin</title>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="{% static 'images/logo.svg' %}">
+            <text>Wealth Origin</text>
+        </div>
+        <a class="a" href="{% url 'about' %}">About Us</a>
+        <a class="a" href="https://api.whatsapp.com/send?phone=+17575059318">Contact Us</a>
+    </nav>
+
+    <section id="hero">
+        <div id="intro">
+            <header>Make the most of your trading with Wealth Origin</header>
+            <article>At Wealth Origin, we are committed to helping you achieve your financial goals through smart investments in the rapidly-evolving world of cryptocurrencies.<br> Join us today and start your journey towards financial freedom!</article>
+            <div id="btn">
+                <a href="{% url 'register' %}">Register</a><a href="{% url 'login' %}">Login</a>
+            </div>
+            
+        </div>
+        <img src="{% static 'images/hero-banner.png' %}">
+    </section>
+
+    <section id="about">
+        <div id="intro">
+            <header class="header">About Us</header>
+            <article>While existing solutions offer to solve just one problem at a time,
+            our team is up to build a secure, useful, & easy-to-use platform.
+            Wealth Origin is one of today's leading and most experienced global equity firms. <a style="color:hsl(222, 100%, 61%);" href="{% url 'about' %}">continue</a>
+            </article>
+            <div id="cards">
+                <card class="card">
+                    <top class="top">1M+</top>
+                    <bottom class="bottom">Trades</bottom>
+                </card>
+    
+                <card class="card">
+                    <top class="top">200K+</top>
+                    <bottom class="bottom">Members</bottom>
+                </card>
+    
+                <card class="card">
+                    <top class="top">$100M+</top>
+                    <bottom class="bottom">Total Payouts</bottom>
+                </card>
+            </div>
+        </div>
+        <img src="{% static 'images/stats-banner.png' %}">
+    </section>
+
+    <section id="services">
+        <header class="header">Our Services and Products</header>
+        
+        <article class="sub-header">With our platform, you can trade on the largest lists of assets in the industry.
+        From Currency pairs, and Commodities to stocks and indices, we have it all.</article>
+
+        <div id="products">
+            <div class="container">
+                <img src="{% static 'images/gold_stack.jpg' %}">
+                <header class="sub-header">Commodities</header>
+                <article class="article">Trade gold, oil and other commodities with us.</article>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'images/stocks.jpg' %}">
+                <header class="sub-header">Stocks</header>
+                <article class="article">Choose from a wide range of stocks around the world.</article>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'images/currency_exchange.jpg' %}">
+                <header class="sub-header">Currencies</header>
+                <article class="article">Trade on the largest and most liquid financial markets in the world.</article>
+            </div>
+
+            <div class="container">
+                <img src="{% static 'images/indices.jpg' %}">
+                <header class="sub-header">Indicies</header>
+                <article class="article">Invest in market indices to improve your portfolio diversification.</article>
+            </div>
+        </div>
+    </section>
+
+    <center><div class="row mx-3" style="margin-top: 5%;">
+        <div class="card col-md-12 col-lg-12 col-xl-12" style="width: 90%;">
+        <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container" style="width: 100%; height: 400px;">
+                <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/timeline/?locale=en#%7B%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Afalse%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A400%2C%22utm_source%22%3A%22zenithcryptotrade.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22timeline%22%7D" style="box-sizing: border-box; display: block; height: 400px; width: 100%;"></iframe>
+                
+                <style>
+                    .tradingview-widget-copyright {
+                        font-size: 13px !important;
+                        line-height: 32px !important;
+                        text-align: center !important;
+                        vertical-align: middle !important;
+                        /* @mixin sf-pro-display-font; */
+                        font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
+                        color: #9db2bd !important;
+                    }
+
+                    .tradingview-widget-copyright .blue-text {
+                        color: #2962FF !important;
+                    }
+
+                    .tradingview-widget-copyright a {
+                        text-decoration: none !important;
+                        color: #9db2bd !important;
+                    }
+
+                    .tradingview-widget-copyright a:visited {
+                        color: #9db2bd !important;
+                    }
+
+                    .tradingview-widget-copyright a:hover .blue-text {
+                        color: #1E53E5 !important;
+                    }
+
+                    .tradingview-widget-copyright a:active .blue-text {
+                        color: #1848CC !important;
+                    }
+
+                    .tradingview-widget-copyright a:visited .blue-text {
+                        color: #2962FF !important;
+                    }
+                </style>
+            </div>
+        <!-- TradingView Widget END -->
+        </div>
+    </div></center>
+
+    <section id="reviews">
+        <header class="header">Reviews</header>
+        <div id="cards">
+            <card class="con">
+                <img src="{% static 'images/cus1.png' %}" alt="Avatar">
+                <top class="top">Jennifer C.</top>
+                <bottom class="bottom">I have been using this trading website for a while now, and I must say, it has exceeded my expectations. The user-friendly interface, real-time market data, and seamless execution of trades make it a top choice for both beginners and experienced traders. Highly recommended!</bottom>
+            </card>
+
+            <card class="con">
+                <img src="{% static 'images/cus2.png' %}" alt="Avatar">
+                <top class="top">John D.</top>
+                <bottom class="bottom">I couldn't be happier with my experience on this trading website. The range of investment options available is impressive, and the research tools provided have helped me make well-informed decisions. A fantastic platform for anyone looking to dive into the world of trading.</bottom>
+            </card>
+
+            <card class="con">
+                <img src="{% static 'images/cus4.png' %}" alt="Avatar">
+                <top class="top">Mark T.</top>
+                <bottom class="bottom">As a novice trader, I was initially apprehensive about using an online platform, but this trading website has completely won me over. I feel confident and ready to take on the markets, thanks to this excellent platform.</bottom>
+            </card>
+
+            <card class="con">
+                <img src="{% static 'images/cus3.png' %}" alt="Avatar">
+                <top class="top">Samantha L.</top>
+                <bottom class="bottom">I've tried several trading websites in the past, but none compare to the level of professionalism and reliability I've experienced here. The platform is lightning-fast, ensuring I never miss out on opportunities. This is my go-to platform for all my trading needs.</bottom>
+            </card>
+        </div>
+    </section>
+
+
+    <section id="join-us">
+        <header class="header">Join Our Team</header>
+        <text class="article">Are you interested in joining our team of real estate experts? We'd love to hear from you!</text>
+
+        <div id="join">
+            <card class="join-con">
+                <img src="{% static 'images/background1.jpg' %}" alt="Avatar">
+                <top class="top">Open Positions.</top>
+                <bottom class="bottom">We're currently hiring for the following positions:
+
+                    <ul>
+                        <li>Real Estate Broker</li>
+                        <li>Property Manager</li>
+                        <li>Estate Consultant</li>
+                    </ul>
+                </bottom>
+            </card>  
+
+            <card class="join-con">
+                <img src="{% static 'images/shake.jpg' %}" alt="Avatar">
+                <top class="top">Work With Us.</top>
+                <bottom class="bottom">We're always looking for talented individuals to join
+                    our team. If you're passionate about real estate and
+                    committed to providing the best possible service to
+                    clients, we want to hear from you.</bottom>
+            </card>  
+        </div>
+    </section>
+
+    <section id="foot">
+        <h4 class="header">Wealth Origin</h4>
+        <p class="article">Trade CFDs all on our advanced, web-based trading platform designed with you, the user in mind.</p>
+        <hr style="width: 99%;">
+        <center><text class="article">© 2014-2023 WealthBridge. All rights reserved.</text></center>
+    </section>
+
+    <a class="what" href="https://api.whatsapp.com/send?phone=+17575059318"><img class= "what" src="{% static 'images/what.png' %}" alt="Avatar"></a>
+    <label id="pop-up"></label>
+
+    <script type="text/javascript">
+
+        var names = [
+            "Emma Smith",
+            "Noah Johnson",
+            "Olivia Brown",
+            "Liam Taylor",
+            "Ava Miller",
+            "Isabella Anderson",
+            "Sophia Thomas",
+            "Mia Jackson",
+            "Charlotte White",
+            "Amelia Harris",
+            "Harper Martin",
+            "Evelyn Clark",
+            "Abigail Lewis",
+            "Emily Lee",
+            "Elizabeth Walker",
+            "Mila Hall",
+            "Ella Allen",
+            "Avery Young",
+            "Sofia King",
+            "Camila Wright"
+        ];
+
+        var numbers = [
+            1400,
+            2000, 
+            3500, 
+            4300, 
+            50000, 
+            2400, 
+            8900, 
+            7800, 
+            1200, 
+            96700, 
+            3200, 
+            15000, 
+            6500, 
+            2100, 
+            48000, 
+            3800, 
+            5800, 
+            2900, 
+            4200, 
+            18000
+        ];
+
+        // Function to display the random name and number
+        function displayRandomData() {
+            // Randomly select a name
+            var randomName = names[Math.floor(Math.random() * names.length)];
+
+            // Randomly select a number
+            var randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
+
+            // Create the message
+            var message = randomName + " just received $" + randomNumber;
+
+        // Display the message in a pop-up
+            document.getElementById("pop-up").innerHTML = message
+        }
+
+        // Call the function initially
+        displayRandomData();
+
+        // Call the function every 5 seconds
+        
+        setInterval(displayRandomData, 5000);
+
+        // Function to show the pop-up button
+        function showLabel() {
+            var button = document.getElementById("pop-up");
+            button.style.display = "block";
+        }
+
+        // Function to hide the pop-up button
+        function hideLabel() {
+            var button = document.getElementById("pop-up");
+            button.style.display = "none";
+        }
+
+        // Function to schedule showing and hiding the pop-up button every 5 seconds
+        function scheduleButton() {
+            setInterval(function() {
+                showLabel();
+                setTimeout(hideLabel, 2000); // Hide the button after 2 seconds
+                
+            },20000) ; // 5,000 milliseconds = 5 seconds
+        }
+
+        // Start scheduling the pop-up button when the page loads
+        window.onload = scheduleButton;
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+:root{
+    --cadet-blue-crayola: hsl(227, 13%, 73%);
+    --blue-crayola_10: hsla(222, 100%, 61%, 0.05);   
+    --eerie-black-1: hsl(240, 5%, 8%);
+    --eerie-black-2: hsl(228, 9%, 10%);   
+    --blue-crayola: hsl(222, 100%, 61%);
+    --white_50: hsla(0, 0%, 100%, 0.5);
+    --white_30: hsla(0, 0%, 100%, 0.3);
+    --white_10: hsla(0, 0%, 100%, 0.1);
+    --black_10: hsla(0, 0%, 0%, 0.1);
+    --white: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0%;
+    font-family: sans-serif;
+    background-color: var(--eerie-black-2);
+    color: white;
+}
+
+#navbar{
+    position: fixed;
+    width: 100%;
+    background-color: var(--eerie-black-1);  
+}
+
+#navbar button{
+    color: white;
+    background-color: var(--eerie-black-1);
+    border-style: none;
+    margin-right: auto;
+    font-size: xx-large;
+    padding: 1%;
+    font-weight: 400;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--eerie-black-1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    line-height: 1.5;
+}
+
+.sidenav label{
+    color: white;
+}
+
+.sidenav img{
+    margin-bottom: 3%;
+    width: 40%;
+    border-radius: 50%;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--cadet-blue-crayola);
+    display: block;
+    transition: 0.3s;
+    line-height: 1.5;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}

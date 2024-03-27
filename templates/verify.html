@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'fontawesome-free-6.4.0-web/css/all.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/confirm.css' %}">
+	<script src="{% static 'scripts/script.js' %}"></script>
+	<script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+	<title>Wealth Origin- Dashboard</title>
+</head>
+<body>
+    <nav id="navbar">
+        <button onclick="openNav()" id="navctrl">&#9776;&nbsp;&nbsp;&nbsp;Trade center</button>
+		<button id="btnnav">Trade Center</button>
+	</nav>
+
+	<div id="SideNav" class="sidenav">
+		<center><img src="{% static 'images/pic.png' %}"/></center>
+		<center><label>{{ user.full_name }}</label></center>
+		<hr>
+		<a href="{% url 'dashboard' %}"><i class="fa-solid fa-house" style="font-size: 20px;"></i>&nbsp&nbsp Dashboard</a>
+		<a href="{% url 'deposit' %}"><i class="fa-solid fa-building-columns" style="font-size: 20px;"></i>&nbsp&nbsp Deposit</a>
+		<a href="{% url 'invest' %}"><i class="fa-solid fa-chart-line" style="font-size: 20px;"></i>&nbsp&nbsp Investment Plan</a>
+		<a href="{% url 'withdraw' %}"><i class="fa-solid fa-square-arrow-up-right" style="font-size: 20px;"></i >&nbsp&nbsp Withdrawal</a>
+		<a href="{% url 'faq' %}"><i class="fa-solid fa-circle-question" style="font-size: 20px;"></i>&nbsp&nbsp FAQ</a>
+		<a href="{% url 'profile' %}"><i class="fa-solid fa-user" style="font-size: 20px;"></i>&nbsp&nbsp Profile</a>
+		<a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px;"></i>&nbsp&nbsp Logout</a>
+	</div>
+
+    <div id="main">
+
+        <div class="modal-content">
+
+            <i class="fa-solid fa-circle-check" style="font-size: 150px; color: hsl(136, 65%, 51%); padding-top: 100px;"></i>
+
+            <center><h2>YOUR ACCOUNT WAS CREATED SUCCESSFULLY</h2></center>
+
+            <h4>Your Account is under review and will be activated shortly.</h4>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

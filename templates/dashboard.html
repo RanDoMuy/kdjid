@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{% static 'fontawesome-free-6.4.0-web/css/all.css' %}" rel="stylesheet">
+	<link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+	<script src="{% static 'scripts/script.js' %}"></script>
+	<script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+	<title>Wealth Origin- Dashboard</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <button onclick="openNav()" id="navctrl">&#9776;&nbsp;&nbsp;&nbsp;Trade center</button>
+		<button id="btnnav">Trade Center</button>
+	</nav>
+
+	<div id="SideNav" class="sidenav">
+		<center><img src="{% static 'images/pic.png' %}"/></center>
+		<center><label>{{ user.full_name }}</label></center>
+		<hr>
+		<a href="{% url 'dashboard' %}"><i class="fa-solid fa-house" style="font-size: 20px;"></i>&nbsp&nbsp Dashboard</a>
+		<a href="{% url 'deposit' %}"><i class="fa-solid fa-building-columns" style="font-size: 20px;"></i>&nbsp&nbsp Deposit</a>
+		<a href="{% url 'invest' %}"><i class="fa-solid fa-chart-line" style="font-size: 20px;"></i>&nbsp&nbsp Investment Plan</a>
+		<a href="{% url 'withdraw' %}"><i class="fa-solid fa-square-arrow-up-right" style="font-size: 20px;"></i >&nbsp&nbsp Withdrawal</a>
+		<a href="{% url 'faq' %}"><i class="fa-solid fa-circle-question" style="font-size: 20px;"></i>&nbsp&nbsp FAQ</a>
+		<a href="{% url 'profile' %}"><i class="fa-solid fa-user" style="font-size: 20px;"></i>&nbsp&nbsp Profile</a>
+		<a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket" style="font-size: 20px;"></i>&nbsp&nbsp Logout</a>
+	</div>
+
+
+	<div id="main">
+		<!-- TradingView Widget BEGIN -->
+		<div class="tradingview-widget-container">
+			<div class="tradingview-widget-container__widget"></div>
+			<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{
+				"symbols": [
+					{
+						"proName": "FOREXCOM:SPXUSD",
+						"title": "S&P 500"
+					},
+					{
+						"proName": "FOREXCOM:NSXUSD",
+						"title": "US 100"
+					},
+					{
+						"proName": "FX_IDC:EURUSD",
+						"title": "EUR/USD"
+					},
+					{
+						"proName": "BITSTAMP:BTCUSD",
+						"title": "Bitcoin"
+					},
+					{
+						"proName": "BITSTAMP:ETHUSD",
+						"title": "Ethereum"
+					},
+					{
+					"description": "TSLA",
+					"proName": "NASDAQ:TSLA"
+					}
+
+				],
+				"showSymbolLogo": true,
+				"colorTheme": "light",
+				"isTransparent": false,
+				"displayMode": "adaptive",
+				"locale": "en"
+			}
+			</script>
+		</div>
+		<!-- TradingView Widget END -->
+
+		
+		<div id="dash_row1">
+			<div id="balance">
+				<div class="card">
+					<div>
+						<header>DEPOSITS</header>
+						<text class="bal">${{ user.deposit_balance }}</text>
+					</div>
+					
+					<img src="{% static 'images/2.png' %}">
+				</div>
+			
+
+				<div class="card">
+					<div>
+						<header>PROFITS</header>
+						<text class="bal">${{ user.profit_balance }}</text>
+					</div>
+
+					<img src="{% static 'images/4.png' %}">
+				</div>
+
+				<div class="card">
+					<div>
+						<header>PLAN</header>
+						<text class="bal tt">{{ user.trading_plan }}</text>
+					</div>
+					<img src="{% static 'images/3.png' %}">
+				</div>
+
+				<div class="card">
+					<div>
+						<header>TRADE STATUS</header>
+						<text class="bal tt">{{ user.trade_status }}</text>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="intro">
+			<h2>Wealth Origin Markets</h2>
+			<article>A breif overview of our trading instruments and their performances over time</article>
+		</div>
+
+		<div class="tradingview-widget-container">
+			<div id="technical-analysis">
+				<div id="tradingview_2726a-wrapper" style="position: relative;box-sizing: content-box;width: 600px;height: 500px;margin: 0 auto !important;padding: 0 !important;font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif;">
+					<div style="width: 600px;height: 500px;background: transparent;padding: 0 !important;">
+						<iframe id="tradingview_2726a" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_2726a&amp;symbol=AAPL&amp;interval=D&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=0&amp;toolbarbg=f1f3f6&amp;studies=ROC%40tv-basicstudies%1FStochasticRSI%40tv-basicstudies%1FMASimple%40tv-basicstudies&amp;theme=Dark&amp;style=1&amp;timezone=exchange&amp;withdateranges=1&amp;showpopupbutton=1&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;showpopupbutton=1&amp;locale=en&amp;utm_source=upwaveoptions.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=AAPL#%7B%22page-uri%22%3A%22upwaveoptions.com%2Fuser%2Findex.php%22%7D" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+			<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+					function updateWidgetSize() {
+						var widgetContainer = $('.tradingview-widget-container');
+						var widgetWidth = widgetContainer.width();
+						var widgetHeight = 750; // Set the aspect ratio according to your preference
+						var widgetId = 'technical-analysis';
+
+						if (widgetWidth < 600) {
+							widgetHeight = 700; // Adjust the height for smaller screens
+						}
+
+						var widget = new TradingView.widget({
+							"container_id": widgetId,
+							"width": widgetWidth,
+							"height": widgetHeight,
+							"symbol": "AAPL",
+							"interval": "D",
+							"timezone": "exchange",
+							"theme": "Dark",
+							"style": "1",
+							"toolbar_bg": "#f1f3f6",
+							"withdateranges": true,
+							"hide_side_toolbar": false,
+							"allow_symbol_change": true,
+							"save_image": false,
+							"studies": ["ROC@tv-basicstudies", "StochasticRSI@tv-basicstudies", "MASimple@tv-basicstudies"],
+							"show_popup_button": true,
+							"popup_width": "1000",
+							"popup_height": "650",
+							"locale": "en"
+						});
+					}
+
+					$(window).on('resize', function() {
+						updateWidgetSize();
+					});
+
+					updateWidgetSize();
+				});
+			</script>
+		</div>
+
+		<div class="container py-5" style="margin-top: 5%; margin-bottom: 5%;">
+			<div class="section_title text-center mb-5">
+				<h2 class="wow slideInUp text-white" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: slideInUp;">Crypto <span class="text-primary">Market</span></h2>
+			</div>
+			<div style="height: 413px; padding: 0px; margin: 0px; width: 100%; visibility: visible; animation-name: slideInLeft;" class="wow slideInLeft">
+				<iframe src="https://widget.coinlib.io/widget?type=full_v2&amp;theme=dark&amp;cnt=6&amp;pref_coin_id=1505&amp;graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
+			</div>
+		</div>
+
+		
+		
+	</div>
+</body>
+</html>

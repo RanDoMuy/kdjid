@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'css/login_signup.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+	<title>Wealth Origin - Register</title>
+</head>
+<body>
+	<div id="title">
+        <img src="{% static 'images/logo.svg' %}">
+		<h1>Wealth Origin</h1>
+		<text>Trade CFDs all on our advanced, web-based trading platform designed with you, the user in mind.</text>
+	</div>
+	
+	<div id="container">
+		<h2>Register Now And Get a $50 Bonus</h2>
+		<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <label>Full Name</label>
+			<input class="input" type="text" placeholder="Full Name" name="fullname" required/>
+            <label>Email Address</label>
+			<input class="input" type="email" placeholder="Email Address" name="email" required/>
+            <label>Phone Number</label>
+			<input class="input" type="tel" placeholder="Phone Number" name="number" required/>
+			<label>Country</label>
+			<select id="countrySelect" class="input" style="width: 100%;" name="country" required>
+				<option>Select Country</option>
+			</select>
+			<h4 style="text-decoration: underline; color: white;">DOCUMENT UPLOAD</h4>
+
+			<div class="dual-input">
+				<div>
+					<button class="d-btn"><i class="fa-solid fa-flag"></i>&nbsp; Nation ID</button>
+				</div>
+
+				<div>
+					<button class="d-btn"><i class="fa-solid fa-id-card"></i>&nbsp; Drivers Lisecence</button>
+				</div>
+			</div>
+
+			<h4 style="color: white;">To avoid delays when verifying account, Please make sure your document meets the criteria below:</h4>
+			<div class="d-text" style="color: white;">
+				<h5>1. Chosen credential must not have expired.</h5>
+				<h5>2. Document should be in good condition and clearly visible.</h5>
+				<h5>3. Make sure that there is no light glare on the document</h5>					
+			</div>
+
+			
+				
+			<label class="label">UPLOAD FRONT SIDE</label>
+			<input class="input" type="file" required name="front-image">
+				
+			<label class="label">UPLOAD PASSPORT PHOTOGRAPH</label>
+			<input class="input" type="file" required name="pass-image">
+			
+
+            <label>Password</label>
+			<input class="input" type="password" placeholder="Password" name="password" required/>
+            <label>Confirm Password</label>
+			<input class="input" type="password" placeholder="Confirm Password" name="password2" required/>
+			<br>
+			<div id="checkbox">
+				<input checked="checked" type="checkbox" required/><text style="color: white;"> i agree to Wealth Origin<text> <a href="{% url 'terms' %}" style="color: rgb(60, 60, 211);">Terms and Conditions</a>
+			</div><br>
+			<div id="checkbox">
+				<input checked="checked" type="checkbox" required/><text style="color: white;"> i agree that i am older than 18<text>
+			</div>
+			<br>
+			<input id="submit" type="submit" value="Join us"/>
+		</form>
+		<hr>
+		<a href="{% url 'login' %}" id="signup">Login</a>
+		<h3 style="color: white;">{{error_message}}</h3>
+	</div>
+
+
+
+    <script>
+        const selectElement = document.getElementById('countrySelect');
+        const apiUrl = 'https://restcountries.com/v3.1/all';
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const countries = data.map(country => country.name.common);
+                countries.sort(); // Sort the country names alphabetically
+
+                countries.forEach(country => {
+                    const option = document.createElement('option');
+                    option.text = country;
+                    selectElement.add(option);
+                });
+            });
+    </script>
+	
+</body>
+</html>

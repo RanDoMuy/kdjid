@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.svg' %}" type="image/x-icon">
+    <script src="//code.tidio.co/wdlbogguc2puurfx22d5vyramsuji9us.js" async></script>
+    <title>About Us</title>
+    <style>
+        body{
+            margin: 0%;
+            background-color: hsl(228, 9%, 10%);
+            color: hsl(227, 13%, 73%);
+        }
+
+        nav{
+            display: flex;
+            background-color: hsl(240, 3%, 6%);
+            padding: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 18px;
+            justify-content: space-evenly;
+        }
+        
+        #logo{
+            display: block;
+            margin-right: auto;
+            align-self: center;
+        }
+
+        article{
+            padding: 2%;
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        footer{
+            background-color: rgb(10, 10, 15);
+            padding: 3%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="logo">
+            <img src="{% static 'images/logo.svg' %}">
+            <text>Wealth Origin</text>
+        </div>
+    </nav>
+
+
+    <article>
+        <center><h1 style="text-decoration: underline;">About Us</h1></center>
+        While existing solutions offer to solve just one problem at a time,
+        our team is up to build a secure, useful, & easy-to-use platform.
+        Wealth Origin is one of today's leading and most experienced global equity firms.
+        We have established a team investment professionals and our platform offers opportunities with more than 1,000 assets,
+        efficient technical indicators, integrated alert system and all the necessary tools so you don't miss any opportunity.
+        Our platform offers immediate execution with real-time results and a user-friendly environment designed for all levels of traders.
+        We provide an intuitive trading platform designed with the latest technological advancements that's geared towards new traders as well as professionals.
+        Free Trade Partners is a distinctive investment company offering our investors access to high-growth investment opportunities in Bitcoin markets and other services.
+        We implement best practices of trading & mining of Bitcoins through our operations, while offering flexibility in our investment plans.
+        Our company benefits from an extensive network of global clients.
+        <center><img src="{% static 'images/cert.png' %}" style="width: 60%;"></center>
+        At Free Trade Partners campany, we emphasize on understanding our client’s requirement and providing suitable solutions to meet their investment criteria. 
+        Our aim is to utilize our expertise & knowledge which will benefit our clients and the users of our services. 
+        Our company believes that when a team outperforms expectations, excellence becomes a reality.
+
+        our Company head office is located here "56 Burnley St, Richmond VIC 3121, Australia"
+    </article>
+
+    <footer>
+        <h4 class="header">Wealth Origin</h4>
+        <p class="article">Trade CFDs all on our advanced, web-based trading platform designed with you, the user in mind.</p>
+        <hr style="width: 100%;">
+        <center><text class="article">© 2014-2023 WealthBridge. All rights reserved.</text></center>
+    </footer>
+</body>
+</html>
