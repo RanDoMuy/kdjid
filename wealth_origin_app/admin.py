@@ -3,7 +3,7 @@ from .models import User, Deposit_History, Withdrawal_History
 # Register your models here.
 
 class UserProfile(admin.ModelAdmin):
-    list_display = ("full_name", "verify", "profit_balance")
+    list_display = ("email", "verify", "profit_balance")
 
 class UserDeposit(admin.ModelAdmin):
     list_display = ("user", "status", "amount")
