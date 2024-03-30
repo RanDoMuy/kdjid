@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o*v@utr_ld$)l387zw0qza(^xy1_1ogek!^^$81=ka276xu*r('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -133,4 +133,4 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR , "static")]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 db_from_env= dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(db_from_env)
-#CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
+CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
