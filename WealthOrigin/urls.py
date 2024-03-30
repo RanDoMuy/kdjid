@@ -45,6 +45,6 @@ urlpatterns = [
     path("faq/", views.faq, name="faq"),
     path("profile/", views.profile, name="profile"),
     path("logout/", views.user_logout, name="logout")
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
 
 handler404 = 'wealth_origin_app.views.handler404'
