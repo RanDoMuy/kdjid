@@ -141,4 +141,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 db_from_env= dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(db_from_env)
-CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
+#CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
