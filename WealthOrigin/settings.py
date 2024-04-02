@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'WealthOrigin.wsgi.application'
+WSGI_APPLICATION = 'WealthOrigin.wsgi.app'
 
 
 # Database
