@@ -130,7 +130,5 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR , "static")]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-db_from_env= dj_database_url.config(conn_max_age=500)
-DATABASES["default"].update(db_from_env)
-CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
+
+#CSRF_TRUSTED_ORIGINS= ["https://www.wealthorigin.online"]
