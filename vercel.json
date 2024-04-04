@@ -1,6 +1,8 @@
 {
   "builds": [{
-     "src": "WealthOrigin/wsgi.py"
+     "src": "WealthOrigin/wsgi.py",
+     "use": "@vercel/python3.11.3",
+     "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
  }],
  "routes": [
      {
