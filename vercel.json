@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 33.6.2,
   "builds": [{
      "src": "WealthOrigin/wsgi.py",
      "use": "@vercel/python",
