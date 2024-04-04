@@ -1,6 +1,6 @@
 {
   "builds": [{
-     "src": "WealthOrigin/wsgi.py",
+     "src": "WealthOrigin/wsgi.py"
  }],
  "routes": [
      {
