@@ -18,7 +18,7 @@
 	
 	<div id="container">
 		<h2>Register Now And Get a $50 Bonus</h2>
-		<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+		<form method="POST">{% csrf_token %}
             <label>Full Name</label>
 			<input class="input" type="text" placeholder="Full Name" name="fullname" required/>
             <label>Email Address</label>
