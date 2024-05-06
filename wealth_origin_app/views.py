@@ -21,7 +21,7 @@ def terms(request):
     return render(request, "terms.html")
 
 def register(request):
-    if request.method== "POST" and 'front-image' in request.FILES:
+    if request.method== "POST":
         fullname= request.POST["fullname"]
         email= request.POST["email"]
         number= request.POST["number"]
