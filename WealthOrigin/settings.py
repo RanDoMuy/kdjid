@@ -84,7 +84,8 @@ DATABASES = {
     }
 }
 
-DATABASES["default"]= dj_database_url.parse("postgres://wealthorigin_user:cRgeTdgidGJTsye7HaSrsvEZtEH3YQcJ@dpg-co21e421hbls738gtpe0-a.oregon-postgres.render.com/wealthorigin") 
+
+DATABASES["default"]= dj_database_url.parse("postgres://wealthorigin_fo6d_user:iUhijHuWRlz2TpbU5YUuakaPAkCAUcMM@dpg-coskau2cn0vc738h5sbg-a.oregon-postgres.render.com/wealthorigin_fo6d") 
 
 
 # Password validation
