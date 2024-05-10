@@ -1,4 +1,4 @@
-from .models import User
+'''from .models import User
 
 def increase_profit_balance():
     instances = User.objects.exclude(trade_status= "INACTIVE")
@@ -33,4 +33,4 @@ def increase_profit_balance():
         if instance.trading_plan == "PLATINUM":
             profit_increase = 1000
             instance.profit_balance += profit_increase
-            instance.save()
+            instance.save() '''
